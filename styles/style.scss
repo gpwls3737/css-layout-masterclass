@@ -398,6 +398,7 @@
 // ------------- ↓ 5번 ↓ ----------------
 
 $gery: #d9d9d9;
+$white: #f0f0f0;
 $boder: 1px solid black;
 
 body {
@@ -415,11 +416,122 @@ body {
   border-bottom: $boder;
 }
 
-.menu {
+.grid2 {
+  grid-column: span 2;
+}
+.menu__list {
   background-color: $gery;
   display: grid;
   grid-column: 1fr 1fr 1fr 2fr 1fr 2fr;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10px;
+  border-bottom: $boder;
+  border-right: $boder;
+  padding: 20px 10px;
+}
 
-  .menu__list {
+.img {
+  background-color: $white;
+  grid-row: span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: $boder;
+  border-left: $boder;
+}
+
+.now {
+  background-color: $white;
+  grid-column: span 4;
+  border-bottom: $boder;
+  border-right: $boder;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 10px;
+
+  .now__sub {
+    color: gray;
   }
+}
+
+.tomorrow {
+  background-color: $white;
+  grid-column: span 2;
+  border-bottom: $boder;
+  border-right: $boder;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 10px;
+
+  .tomorrow__sub {
+    color: gray;
+  }
+}
+
+.img-s {
+  background-color: $white;
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: $boder;
+  border-right: $boder;
+}
+
+.news {
+  background-color: $white;
+  grid-column: span 2;
+  border-bottom: $boder;
+  border-right: $boder;
+  padding: 10px 10px;
+}
+.news__date {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+.news__title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.news__write {
+  display: flex;
+  padding-top: 10px;
+}
+.news__big {
+  background-color: $white;
+  grid-column: span 4;
+  border-bottom: $boder;
+  border-right: $boder;
+  padding: 10px 10px;
+  grid-row: span 2;
+}
+
+.mail {
+  background-color: $gery;
+  grid-column: span 2;
+  grid-row: span 2;
+  .mail__here {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 30px 15px;
+  }
+  .mail__here-write {
+    display: flex;
+    justify-content: center;
+  }
+  .eamil__write,
+  .mail__here-btn {
+    border: none;
+    background-color: $gery;
+    border-bottom: $boder;
+  }
+  .mail__here-btn {
+    font-weight: bold;
+  }
+}
+
+.sns {
+  background-color: $gery;
 }
