@@ -1,4 +1,4 @@
-@import "./reset.scss";
+@use "./reset.scss";
 
 // body {
 //   background-color: #dce6d1;
@@ -220,81 +220,143 @@
 
 // ------------- ↓ 3번 ↓ ----------------
 
+// body {
+//   display: grid;
+//   background-color: rgb(249, 244, 255);
+//   border: 1.5px solid black;
+// }
+
+// .main_menu,
+// .sub_menu {
+//   background-color: white;
+//   border-bottom: 1.5px solid black;
+//   .main_menu__list {
+//     display: grid;
+//     grid-template-columns: repeat(5, 1fr) 1.5fr repeat(5, 1fr);
+//   }
+//   .main_menu__lists {
+//     text-align: center;
+//     border-right: 1px solid black;
+//     padding: 15px;
+//     font-size: 14px;
+//     &:nth-child(6) {
+//       font-weight: bold;
+//       font-size: 18px;
+//     }
+//   }
+//   .sub_menu__li {
+//     font-size: 13px;
+//     &:first-child {
+//       padding-left: 40px;
+//     }
+//   }
+// }
+
+// .item {
+//   display: grid;
+//   grid-template-columns: 350px 2fr 2fr;
+//   background-color: white;
+//   .item__photo {
+//     grid-row: span 2;
+//     background-image: url("https://picsum.photos/300/400");
+//     background-size: cover;
+//     border-right: 1.5px solid rgba($color: #000000, $alpha: 0.6);
+//   }
+//   .item__info {
+//     grid-column: 2 / -1;
+//     padding: 110px 40px;
+//     border-bottom: 1.5px solid rgba($color: #000000, $alpha: 0.6);
+//     .item__subtitle {
+//       font-size: 15px;
+//       padding-bottom: 10px;
+//     }
+//     .item__maintitle {
+//       font-size: 50px;
+//       font-weight: bold;
+//       padding-bottom: 40px;
+//     }
+//     .item__price {
+//       font-size: 25px;
+//       font-weight: bold;
+//       padding-right: 60px;
+//     }
+//   }
+// }
+
+// .item__write {
+//   border-right: 1.5px solid rgba($color: #000000, $alpha: 0.6);
+//   padding: 30px 40px 100px 40px;
+//   .item__write-tilte {
+//     font-weight: bold;
+//   }
+//   .item__write-sub {
+//     padding-top: 15px;
+//   }
+// }
+
+// .item__menu {
+//   padding: 40px 50px;
+//   .item__menu-list {
+//     border-bottom: 1.5px solid black;
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 10px 0px;
+//     font-weight: bold;
+//   }
+// }
+
+// ------------ ^ 3번 ^ ----------------
+
+// ------------- ↓ 3번 ↓ ----------------
+
 body {
+  display: grid;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 10fr;
-  background-color: rgb(249, 244, 255);
-  border: 1.5px solid black;
+  grid-template-columns: 1fr 3fr 6fr;
+  background-color: rgb(241, 241, 241);
 }
 
-.main_menu,
-.sub_menu {
-  background-color: white;
-  border-bottom: 1.5px solid black;
-  .main_menu__list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr) 1.5fr repeat(5, 1fr);
+.tb {
+  display: grid;
+  grid-template-rows: repeat(4, 2fr);
+  .tb__list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
   }
-  .main_menu__lists {
-    text-align: center;
-    border-right: 1px solid black;
+  .tb__list-text {
+    font-size: 15px;
     padding: 15px;
-    font-size: 14px;
-    &:nth-child(6) {
-      font-weight: bold;
-      font-size: 18px;
-    }
   }
-  .sub_menu__li {
-    font-size: 13px;
-    &:first-child {
-      padding-left: 40px;
-    }
+  .tb__list-b-i {
+    font-size: 70px;
+    padding-bottom: 70px;
+  }
+  .tb__list-s-i {
+    font-size: 10px;
+    padding: 15px;
   }
 }
 
-.item {
+.info {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 2fr;
-  background-color: white;
-  .item__photo {
-    grid-row: span 2;
-    background-image: url("https://picsum.photos/300/400");
-    background-size: cover;
+  grid-template-columns: 1fr;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  .info__top {
+    border-bottom: 2px solid black;
+    text-align: center;
+    padding-top: 50px;
   }
-  .item__info {
-    grid-column: 2 / -1;
-    padding-top: 80px;
-    padding-left: 40px;
-    border-bottom: 1.5px solid rgba($color: #000000, $alpha: 0.6);
-    .item__subtitle {
-      font-size: 15px;
-      padding-bottom: 10px;
-    }
-    .item__maintitle {
-      font-size: 50px;
-      font-weight: bold;
-      padding-bottom: 40px;
-    }
-    .item__price {
-      font-size: 25px;
-      font-weight: bold;
-      padding-right: 60px;
-    }
+  .info__top-s {
+    font-size: 14px;
   }
-}
-
-.item__write {
-  padding-left: 10px;
-  border-right: 1.5px solid rgba($color: #000000, $alpha: 0.6);
-  .item__write-tilte {
-    margin-top: 15px;
+  .info__top-b {
+    font-size: 70px;
+    font-weight: bold;
   }
-  .item__write-sub {
-    padding-top: 15px;
+  .info__bottom {
   }
-}
-
-.item__menu {
 }
